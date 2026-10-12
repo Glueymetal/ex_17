@@ -12,11 +12,11 @@ pipeline{
                 echo "Building branch ${env.BRANCH_NAME}"
             }
         }
-        stage('Test')[
+        stage('Test'){
             steps{
                 echo "Running Tests on  ${env.BRANCH_NAME}" 
             }
-        ]
+        }
         stage('Deploy')
         {
             when {branch 'main'}
